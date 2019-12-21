@@ -15,7 +15,7 @@ mecabrc: (デフォルト)
 -Oyomi: (読みのみを出力)
 '''
 
-TEXT = input().strip()
+TEXT = input().strip() 
 print('# 「元文章」出力結果')
 print(TEXT)
 
