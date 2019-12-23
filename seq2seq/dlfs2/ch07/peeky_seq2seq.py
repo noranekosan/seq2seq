@@ -16,7 +16,7 @@ class PeekyDecoder:
         lstm_b = np.zeros(4 * H).astype('f')
         affine_W = (rn(H + H, V) / np.sqrt(H + H)).astype('f')
         affine_b = np.zeros(V).astype('f')
-
+ 
         self.embed = TimeEmbedding(embed_W)
         self.lstm = TimeLSTM(lstm_Wx, lstm_Wh, lstm_b, stateful=True)
         self.affine = TimeAffine(affine_W, affine_b)
