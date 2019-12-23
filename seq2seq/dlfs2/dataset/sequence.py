@@ -51,7 +51,7 @@ def load_data(file_name='token.ta', seed=1984):
             t[i] = np.append(ids, np.full(64-len(ids),word_to_id['_']))
     except KeyError:
         pass
-
+ 
     # shuffle
     indices = np.arange(len(x))
     if seed is not None:
