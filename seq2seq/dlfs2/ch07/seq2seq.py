@@ -1,4 +1,4 @@
-# coding: utf-8
+ # coding: utf-8
 import sys
 sys.path.append('..')
 from common.time_layers import *
@@ -31,7 +31,7 @@ class Encoder:
     def backward(self, dh):
         dhs = np.zeros_like(self.hs)
         dhs[:, -1, :] = dh
- 
+
         dout = self.lstm.backward(dhs)
         dout = self.embed.backward(dout)
         return dout
